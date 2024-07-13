@@ -1,6 +1,6 @@
-package live.ixnoah.housetils
+package com.github.noahthenerd.housetils
 
-import live.ixnoah.housetils.utils.ChatUtils
+import com.github.noahthenerd.housetils.utils.ChatUtils
 import net.minecraftforge.client.event.ClientChatReceivedEvent
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent
 

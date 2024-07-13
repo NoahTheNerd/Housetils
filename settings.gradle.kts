@@ -23,4 +23,4 @@ plugins {
 }
 
 
-rootProject.name = "housetils"
+rootProject.name = "Housetils"

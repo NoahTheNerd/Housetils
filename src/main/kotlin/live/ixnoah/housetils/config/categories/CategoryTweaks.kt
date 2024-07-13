@@ -1,4 +1,4 @@
-package live.ixnoah.housetils.config.categories
+package com.github.noahthenerd.housetils.config.categories
 
 import com.google.gson.annotations.Expose
 import io.github.notenoughupdates.moulconfig.annotations.ConfigEditorBoolean

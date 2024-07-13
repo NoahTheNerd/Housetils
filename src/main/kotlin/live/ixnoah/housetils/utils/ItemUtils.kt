@@ -1,4 +1,4 @@
-package live.ixnoah.housetils.utils
+package com.github.noahthenerd.housetils.utils
 
 import net.minecraft.client.Minecraft
 import net.minecraft.item.ItemStack

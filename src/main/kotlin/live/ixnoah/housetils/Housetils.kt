@@ -1,8 +1,8 @@
-package live.ixnoah.housetils
+package com.github.noahthenerd.housetils
 
 import io.github.notenoughupdates.moulconfig.managed.ManagedConfig
-import live.ixnoah.housetils.commands.CommandManager
-import live.ixnoah.housetils.config.HousetilsConfig
+import com.github.noahthenerd.housetils.commands.CommandManager
+import com.github.noahthenerd.housetils.config.HousetilsConfig
 import net.minecraft.client.Minecraft
 import net.minecraft.init.Blocks
 import net.minecraftforge.common.MinecraftForge

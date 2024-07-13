@@ -1,7 +1,7 @@
-package live.ixnoah.housetils.commands.override
+package com.github.noahthenerd.housetils.commands.override
 
-import live.ixnoah.housetils.Housetils
-import live.ixnoah.housetils.utils.ChatUtils
+import com.github.noahthenerd.housetils.Housetils
+import com.github.noahthenerd.housetils.utils.ChatUtils
 import net.minecraft.command.CommandBase
 import net.minecraft.command.CommandException
 import net.minecraft.command.ICommandSender

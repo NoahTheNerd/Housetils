@@ -1,6 +1,6 @@
-package com.github.noahthenerd.housetils.commands.core
+package live.ixnoah.housetils.commands.core
 
-import com.github.noahthenerd.housetils.Housetils
+import live.ixnoah.housetils.Housetils
 import net.minecraft.command.CommandBase
 import net.minecraft.command.CommandException
 import net.minecraft.command.ICommandSender

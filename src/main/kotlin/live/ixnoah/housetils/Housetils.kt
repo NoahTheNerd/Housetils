@@ -1,10 +1,9 @@
-package com.github.noahthenerd.housetils
+package live.ixnoah.housetils
 
 import io.github.notenoughupdates.moulconfig.managed.ManagedConfig
-import com.github.noahthenerd.housetils.commands.CommandManager
-import com.github.noahthenerd.housetils.config.HousetilsConfig
+import live.ixnoah.housetils.commands.CommandManager
+import live.ixnoah.housetils.config.HousetilsConfig
 import net.minecraft.client.Minecraft
-import net.minecraft.init.Blocks
 import net.minecraftforge.common.MinecraftForge
 import net.minecraftforge.fml.common.Mod
 import net.minecraftforge.fml.common.event.FMLInitializationEvent
@@ -23,7 +22,7 @@ class Housetils {
         val configData = config.instance
 
         fun openConfigGui() {
-            Thread({Minecraft.getMinecraft().addScheduledTask {config.openConfigGui()}}).start()
+            Thread { Minecraft.getMinecraft().addScheduledTask { config.openConfigGui() } }.start()
         }
     }
 }

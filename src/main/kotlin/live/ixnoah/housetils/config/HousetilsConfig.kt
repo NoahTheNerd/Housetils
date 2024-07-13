@@ -1,8 +1,8 @@
-package com.github.noahthenerd.housetils.config
+package live.ixnoah.housetils.config
 import com.google.gson.annotations.Expose
 import io.github.notenoughupdates.moulconfig.annotations.Category
-import com.github.noahthenerd.housetils.config.categories.CategoryData
-import com.github.noahthenerd.housetils.config.categories.CategoryTweaks
+import live.ixnoah.housetils.config.categories.CategoryData
+import live.ixnoah.housetils.config.categories.CategoryTweaks
 import io.github.notenoughupdates.moulconfig.Config as MoulConfig
 
 class HousetilsConfig: MoulConfig() {

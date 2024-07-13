@@ -1,4 +1,4 @@
-package com.github.noahthenerd.housetils.utils
+package live.ixnoah.housetils.utils
 
 import net.minecraft.client.Minecraft
 import net.minecraft.util.ChatComponentText

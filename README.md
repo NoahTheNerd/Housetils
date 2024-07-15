@@ -15,8 +15,10 @@
 ## About Housetils
 Housetils *(house + **util**ities)* is a general-purpose mod for Hypixel's Housing mode that aims to provide you with as many features as possible. Whether you're a creator or a player, this mod is a must-have.
 
-**Install the latest version of Housetils down below!**<br>
-![GitHub Release](https://img.shields.io/github/v/release/NoahTheNerd/Housetils)
+## Installation
+You can find the latest release of Housetils using the button below.
+
+[![GitHub Release](https://img.shields.io/github/v/release/NoahTheNerd/Housetils)](/releases)
 
 ## Features
 * Chat Filtering

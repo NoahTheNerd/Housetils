@@ -13,7 +13,7 @@ class ViewPlayerStatCommand : CommandBase() {
 
     @Throws(CommandException::class)
     override fun processCommand(sender: ICommandSender, args: Array<String>) {
-        if (args.isNotEmpty() || !Housetils.configData.data.defaultPlayer)
+        if (args.isNotEmpty() || !Housetils.config.data.defaultPlayer)
             return ChatUtils.command("viewstats " + args[0])
 
         ChatUtils.command("viewstats " + sender.name)

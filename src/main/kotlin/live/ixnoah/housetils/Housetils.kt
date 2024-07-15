@@ -18,11 +18,11 @@ class Housetils {
     }
 
     companion object {
-        val config = ManagedConfig.create(File("config/housetils/config.json"), HousetilsConfig::class.java)
-        val configData = config.instance
+        private val managedConfig = ManagedConfig.create(File("config/housetils/config.json"), HousetilsConfig::class.java)
+        val config = managedConfig.instance
 
         fun openConfigGui() {
-            Thread { Minecraft.getMinecraft().addScheduledTask { config.openConfigGui() } }.start()
+            Thread { Minecraft.getMinecraft().addScheduledTask { managedConfig.openConfigGui() } }.start()
         }
     }
 }

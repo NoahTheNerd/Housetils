@@ -17,7 +17,7 @@ class EditPlayerStatCommand : CommandBase() {
 
     @Throws(CommandException::class)
     override fun processCommand(sender: ICommandSender, args: Array<String>) {
-        if (args.size != 3 || !Housetils.configData.data.defaultPlayer)
+        if (args.size != 3 || !Housetils.config.data.defaultPlayer)
             return ChatUtils.command("editstat " + args.joinToString(" "))
 
         if (operations.contains(args[1].lowercase()) && args[2].toIntOrNull() != null) {

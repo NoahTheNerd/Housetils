@@ -17,7 +17,11 @@ object ChatUtils {
     }
 
     fun addColor(message: String): String {
-        return message.replace(Regex("&(?=[0-9a-fk-or])"), '§'.toString())
+        return message.replace(Regex("&(?=[0-9a-fk-or])"), "§")
+    }
+
+    fun removeColor(message: String): String {
+        return message.replace(Regex("§[0-9a-fk-or]"), "")
     }
 
     fun command(command: String) {

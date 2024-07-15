@@ -4,7 +4,7 @@
     <img src="housetils.png" alt="Housetils Logo" height="100">
     <br>
     <h2>Housetils</h2>
-    <p>The last Housing mod you'll ever need.</p>
+    <p>The last Hypixel Housing mod you'll ever need.</p>
     <img alt="GitHub Downloads (all assets, all releases)" src="https://img.shields.io/github/downloads/NoahTheNerd/Housetils/total">
     <img alt="GitHub Actions Workflow Status" src="https://img.shields.io/github/actions/workflow/status/NoahTheNerd/Housetils/build.yml">
     <img alt="" src="https://img.shields.io/badge/license-Polyform Perimeter-blue">

@@ -5,7 +5,7 @@
     <br>
     <h2>Housetils</h2>
     <p>The last Hypixel Housing mod you'll ever need.</p>
-    <img alt="GitHub Downloads (all assets, all releases)" src="https://img.shields.io/github/downloads/NoahTheNerd/Housetils/total">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/NoahTheNerd/Housetils">
     <img alt="GitHub Actions Workflow Status" src="https://img.shields.io/github/actions/workflow/status/NoahTheNerd/Housetils/build.yml">
     <img alt="" src="https://img.shields.io/badge/license-Polyform Perimeter-blue">
 </div>

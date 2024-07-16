@@ -1,15 +1,16 @@
-package live.ixnoah.housetils
+package live.ixnoah.housetils.events
 
+import live.ixnoah.housetils.Housetils
 import live.ixnoah.housetils.utils.ChatUtils
 import net.minecraftforge.client.event.ClientChatReceivedEvent
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent
 
-class EventHandler {
+class EventChat {
     private val joinLeaveRegex = Regex("^(\\[(.*?)] )[A-z0-9_]{1,16} (entered|left) the world\\.$")
     private val joinLobbyRegex = Regex("^( >>> )?\\[MVP\\+{1,2}] [A-z0-9_]{1,16} joined the lobby!( <<<)?$")
 
     @SubscribeEvent
-    fun onChat( event: ClientChatReceivedEvent ) {
+    fun onChat( event: ClientChatReceivedEvent) {
         if (event.message.formattedText.startsWith("§r§7* ")) {
             val prefix = Housetils.config.tweaks.asteriskBehaviour
             val message = event.message.formattedText.drop(6)
@@ -39,7 +40,7 @@ class EventHandler {
     private val maxDurationMs = 300L
 
     @SubscribeEvent
-    fun sortStats( event: ClientChatReceivedEvent ) {
+    fun sortStats( event: ClientChatReceivedEvent) {
         val trackingId = System.currentTimeMillis()
 
         if (event.message.formattedText.matches(statTitleRegex)) {
@@ -57,7 +58,7 @@ class EventHandler {
                     var cuteKey = key
 
                     val isTemp = Housetils.config.data.tempStatPrefix.isNotEmpty()
-                                 && key.startsWith(Housetils.config.data.tempStatPrefix)
+                            && key.startsWith(Housetils.config.data.tempStatPrefix)
 
                     if (isTemp && Housetils.config.data.tempStatBehaviour == 1)
                         cuteKey = "§7$cuteKey"

@@ -44,7 +44,7 @@ class Housetils {
     }
 
     companion object {
-        val MOD_VER = Version("1.0.1")
+        val MOD_VER = Version("1.1.0")
         var LATEST_VER = MOD_VER
         var OUTDATED = false
 

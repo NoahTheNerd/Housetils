@@ -26,7 +26,7 @@ class BookmarkCommand : CommandBase() {
                 ChatUtils.chat("&cYou don't have any houses bookmarked! Use /bookmarks add <player> to bookmark a house!", true)
                 return
             }
-            ChatUtils.chat("\n&aYour Bookmarks:", true)
+            ChatUtils.chat("&aYour Bookmarks:", true)
             Bookmarks.data.bookmarks.sortedBy { item -> item.name }.forEach { entry ->
                 ChatUtils.chat(
                     NeoComponent("§e  ${entry.name}")

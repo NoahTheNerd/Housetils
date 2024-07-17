@@ -37,7 +37,7 @@ class EventChat {
     private var targetStats = mutableMapOf<String, String>()
     private var trackingSince : Long = 0
 
-    private val maxDurationMs = 300L
+    private val maxDurationMs = 100L
 
     @SubscribeEvent
     fun sortStats( event: ClientChatReceivedEvent) {

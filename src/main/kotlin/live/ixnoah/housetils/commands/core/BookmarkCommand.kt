@@ -1,18 +1,11 @@
 package live.ixnoah.housetils.commands.core
 
-import io.github.notenoughupdates.moulconfig.gui.MouseEvent
-import live.ixnoah.housetils.Housetils
 import live.ixnoah.housetils.features.Bookmarks
 import live.ixnoah.housetils.utils.ChatUtils
 import live.ixnoah.housetils.utils.NeoComponent
 import net.minecraft.command.CommandBase
 import net.minecraft.command.CommandException
 import net.minecraft.command.ICommandSender
-import net.minecraft.event.ClickEvent
-import net.minecraft.util.ChatComponentText
-import net.minecraft.util.ChatStyle
-import tv.twitch.chat.Chat
-
 
 class BookmarkCommand : CommandBase() {
     override fun getCommandName(): String {
@@ -22,6 +15,10 @@ class BookmarkCommand : CommandBase() {
     private val acceptedArgs = listOf("add","remove")
     private val nameRegex = Regex("^[0-9A-z_]{1,16}$")
 
+    private fun formatUUID(uuid: String): String {
+        return "${uuid.substring(0, 8)}-${uuid.substring(8, 12)}-${uuid.substring(12, 16)}-${uuid.substring(16, 20)}-${uuid.substring(20)}"
+    }
+
     @Throws(CommandException::class)
     override fun processCommand(sender: ICommandSender, args: Array<String>) {
         if (args.isEmpty()) {
@@ -29,11 +26,11 @@ class BookmarkCommand : CommandBase() {
                 ChatUtils.chat("&cYou don't have any houses bookmarked! Use /bookmarks add <player> to bookmark a house!", true)
                 return
             }
-            ChatUtils.chat("&aYour Bookmarks:", true)
-            Bookmarks.data.bookmarks.forEach { entry ->
+            ChatUtils.chat("\n&aYour Bookmarks:", true)
+            Bookmarks.data.bookmarks.sortedBy { item -> item.name }.forEach { entry ->
                 ChatUtils.chat(
                     NeoComponent("§e  ${entry.name}")
-                        .onClick("run_command", "/visit ${entry.uuid}")
+                        .onClick("run_command", "/visit ${formatUUID(entry.uuid)}")
                         .onHover("show_text", "§a${entry.name}\n§eClick to visit!")
                 )
             }

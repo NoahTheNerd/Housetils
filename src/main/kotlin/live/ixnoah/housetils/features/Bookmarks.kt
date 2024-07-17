@@ -2,28 +2,26 @@ package live.ixnoah.housetils.features
 
 import com.google.gson.Gson
 import com.google.gson.JsonObject
-import com.google.gson.annotations.Expose
 import io.github.notenoughupdates.moulconfig.managed.ManagedDataFile
-import kotlinx.serialization.Serializable
 import live.ixnoah.housetils.utils.ChatUtils
+import live.ixnoah.housetils.utils.KSerializable
 import live.ixnoah.housetils.utils.KotlinTypeAdapterFactory
-import java.awt.print.Book
 import java.io.File
 import java.io.InputStreamReader
 import java.net.URL
 
-@Serializable
+@KSerializable
 data class Bookmarks(
-    val bookmarks: MutableSet<BookmarkEntry>,
+    val bookmarks: MutableSet<BookmarkEntry> = mutableSetOf(),
 ) {
-    @Serializable
+    @KSerializable
     data class BookmarkEntry(
         val name: String,
         val uuid: String,
     )
 
     companion object {
-        val DATA = ManagedDataFile.create(File("config/mymod/bookmarks.json"), Bookmarks::class.java) {
+        val DATA = ManagedDataFile.create(File("config/housetils/bookmarks.json"), Bookmarks::class.java) {
             jsonMapper {
                 gsonBuilder.registerTypeAdapterFactory(KotlinTypeAdapterFactory())
             }
@@ -32,7 +30,7 @@ data class Bookmarks(
 
         fun addBookmarkViaMojang(name: String) {
             Thread {
-                val apiUrl = URL("https://api.mojang.com/users/profiles/minecraft/ixNoah")
+                val apiUrl = URL("https://api.mojang.com/users/profiles/minecraft/$name")
                 val apiRes = Gson().fromJson(
                     InputStreamReader(apiUrl.openStream()),
                     JsonObject::class.java

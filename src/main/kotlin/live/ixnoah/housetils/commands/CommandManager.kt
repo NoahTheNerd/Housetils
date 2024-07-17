@@ -1,5 +1,6 @@
 package live.ixnoah.housetils.commands
 
+import live.ixnoah.housetils.commands.core.BookmarkCommand
 import live.ixnoah.housetils.commands.core.ConfigCommand
 import live.ixnoah.housetils.commands.override.EditPlayerStatCommand
 import live.ixnoah.housetils.commands.override.ViewPlayerStatCommand
@@ -11,6 +12,10 @@ class CommandManager {
     init {
         commandHandler.registerCommand(ConfigCommand())
 
+        // Custom
+        commandHandler.registerCommand(BookmarkCommand())
+
+        // Overrides
         commandHandler.registerCommand(EditPlayerStatCommand())
         commandHandler.registerCommand(ViewPlayerStatCommand())
     }
